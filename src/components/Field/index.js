@@ -55,7 +55,7 @@ export default class extends React.Component {
     const binded = callback.bind(this);
     setInterval(
       binded,
-      110
+      80 
     )
   }
   componentDidUpdate(prevProps, prevState) {
