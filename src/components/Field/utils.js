@@ -10,9 +10,12 @@ export const directions = {
   83: 'bottom'
 }
 
-export function checkGameOver(snake) {
+export function checkGameOver(snake, { width, height }) {
   const [ head, ...rest ] = snake;
-  return rest.some(item => _.isEqual(item, head));
+  const { x, y } = head;
+  return rest.some(item => _.isEqual(item, head)) ||
+	x === width - 1 || x === 0 ||
+	y === height - 1 || y === 0;
 }
 
 export function checkEating(snake, food) {

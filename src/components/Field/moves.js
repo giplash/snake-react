@@ -10,7 +10,7 @@ function moveToRight(snake, size, growing) {
   const mapped = snake.map(({ x, y }, i) => {
     if (i === 0) {
       prev = {x, y};
-      const newX = x + 1 < width - 1 ? x + 1 : 0;
+      const newX = x + 1;
       return {
 	y,
 	x: newX
@@ -32,7 +32,7 @@ function moveToLeft(snake, size, growing) {
   const mapped = snake.map(({ x, y }, i) => {
     if (i === 0) {
       prev = {x, y};
-      const newX = x - 1 >= 0 ? x - 1 : width - 1;
+      const newX = x - 1;
       return {
 	y,
 	x: newX
@@ -54,7 +54,7 @@ function moveToTop(snake, size, growing) {
   const mapped = snake.map(({ x, y }, i) => {
     if (i === 0) {
       prev = {x, y};
-      const newY = y - 1 >= 0 ? y - 1 : height - 1;
+      const newY = y - 1;
       return {
 	x,
 	y: newY
@@ -76,7 +76,7 @@ function moveToBottom(snake, size, growing) {
   const mapped = snake.map(({ x, y }, i) => {
     if (i === 0) {
       prev = {x, y};
-      const newY = y + 1 < height - 1 ? y + 1 : 0;
+      const newY = y + 1;
       return {
 	x,
 	y: newY

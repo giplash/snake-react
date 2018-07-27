@@ -8,7 +8,7 @@ export default class extends React.Component {
       <div className="container">
 	<Field 
 	  size={{
-	    width: 40,
+	    width: 70,
 	    height: 40
 	  }}
 	/>

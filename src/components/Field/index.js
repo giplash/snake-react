@@ -8,10 +8,10 @@ import './index.css';
 export default class extends React.Component {
   state = {
     snake: [
-      {x: 5, y: 0},
-      {x: 5, y: 1},
-      {x: 5, y: 2},
-      {x: 5, y: 3},
+      {x: 5, y: 5},
+      {x: 5, y: 6},
+      {x: 5, y: 7},
+      {x: 5, y: 8},
     ],
     food: {
       x: null,
@@ -22,10 +22,10 @@ export default class extends React.Component {
   }
   restart() {
     const snake = [
-	{x: 5, y: 0},
-	{x: 5, y: 1},
-	{x: 5, y: 2},
-	{x: 5, y: 3},
+	{x: 5, y: 5},
+	{x: 5, y: 6},
+	{x: 5, y: 7},
+	{x: 5, y: 8},
     ];
     this.setState({
       snake,
@@ -55,7 +55,7 @@ export default class extends React.Component {
     const binded = callback.bind(this);
     setInterval(
       binded,
-      100 
+      110
     )
   }
   componentDidUpdate(prevProps, prevState) {
@@ -99,7 +99,7 @@ function callback() {
     })
     realGrowing += 3;
   }
-  if (utils.checkGameOver(snake)) {
+  if (utils.checkGameOver(snake, size)) {
     alert('you lost');
     this.restart();
     return ;
