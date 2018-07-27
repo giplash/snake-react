@@ -1,10 +1,11 @@
 {
-  "name": "app-template",
+  "name": "snake-react",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://giplash.github.io/app-template",
+  "homepage": "https://giplash.github.io/snake-react",
   "dependencies": {
     "axios": "^0.18.0",
+    "classnames": "^2.2.6",
     "gh-pages": "^1.2.0",
     "lodash": "^4.17.10",
     "node-sass-chokidar": "^1.3.3",

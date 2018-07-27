@@ -1,0 +1,13 @@
+.square {
+  height: 10px;
+  width: 10px;
+  //transition: background-color 0.05s;
+}
+
+.square.body {
+  background-color: red;
+}
+
+.square.food{
+  background-color: green;
+}
