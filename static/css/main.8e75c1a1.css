@@ -1,0 +1,2 @@
+.square{height:15px;width:15px;border:.8px solid pink}.square.body{background-color:red}.square.food{background-color:green}.row{display:-ms-flexbox;display:flex}.field{display:-ms-flexbox;display:flex;-ms-flex-direction:column;flex-direction:column;border:5px solid #000;background-color:pink}.field:focus{outline:none}.container{display:-ms-flexbox;display:flex;-ms-flex-pack:center;justify-content:center;-ms-flex-align:center;align-items:center}
+/*# sourceMappingURL=main.8e75c1a1.css.map*/
