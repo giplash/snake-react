@@ -1,0 +1,18 @@
+.menu {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center; }
+  .menu button {
+    display: block;
+    padding: 15px 50px;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    background-color: #95abf9;
+    border-radius: 10px;
+    font-size: 25px;
+    margin: 5px 0px; }
+  .menu .score-value {
+    font-size: 20px;
+    font-weight: bold; }

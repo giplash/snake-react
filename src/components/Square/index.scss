@@ -1,0 +1,19 @@
+.square {
+  height: 20px;
+  width: 20px;
+  border: 0.8px solid pink;
+}
+
+.square.body {
+  background-color: red;
+}
+
+.square.food{
+  background-color: green;
+  border-radius: 50%;
+}
+
+.square.body.food {
+  background-color: red;
+  border-radius: 0px;
+}
