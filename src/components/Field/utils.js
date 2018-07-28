@@ -26,8 +26,8 @@ export function checkEating(snake, food) {
 export function generateFood({ width, height }, snake) {
   let x, y;
   do {
-    x = _.random(0, width - 1);
-    y = _.random(0, height - 1);
+    x = _.random(1, width - 2);
+    y = _.random(1, height - 2);
   } while (snake && snake.some(item => _.isEqual(item, {x, y})))
   return {
     x,
