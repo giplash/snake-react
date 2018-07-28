@@ -5,8 +5,10 @@
   "homepage": "https://giplash.github.io/app-template",
   "dependencies": {
     "axios": "^0.18.0",
+    "classnames": "^2.2.6",
     "gh-pages": "^1.2.0",
     "lodash": "^4.17.10",
+    "node-sass-chokidar": "^1.3.3",
     "react": "^16.4.1",
     "react-dom": "^16.4.1",
     "react-redux": "^5.0.7",
@@ -17,6 +19,8 @@
     "redux-thunk": "^2.3.0"
   },
   "scripts": {
+    "build-css": "node-sass-chokidar src/ -o src/",
+    "watch-css": "npm run build-css && node-sass-chokidar src/ -o src/ --watch --recursive",
     "predeploy": "npm run build",
     "deploy": "gh-pages -d build",
     "start": "react-scripts start",
