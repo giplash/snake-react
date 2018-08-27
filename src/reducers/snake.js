@@ -12,6 +12,7 @@ const initialState = {
   growing: 0,
   food: {x: 10, y: 10},
   isPlaying: false,
+  isReadyToTurn: true,
   size: {
     width: 30,
     height: 20
@@ -140,6 +141,12 @@ const snake = handleActions({
   },
   [actions.restartGame](start) {
     return initialState;
+  },
+  [actions.startTurning](state) {
+    return { ...state, isReadyToTurn: true }
+  },
+  [actions.stopTurning](state) {
+    return { ...state, isReadyToTurn: false }
   }
 }, initialState);
 

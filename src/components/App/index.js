@@ -29,18 +29,20 @@ export default class extends React.Component {
   }
   handleKeyDown = e => {
     const code = e.keyCode;
-    const { direction: current, isPlaying } = this.props.snake;
+    const { direction: current, isPlaying, isReadyToTurn } = this.props.snake;
     isPlaying ? null : this.props.startGame();
     if (code === 27) {
       return ;
     }
     if (code === 38 || code === 40) e.preventDefault();
     const direction = directions[code];
+    if (!isReadyToTurn) return;
     if (current === direction) return ;
     if (current === 'right' && direction === 'left') return;
     if (current === 'left' && direction === 'right') return;
     if (current === 'top' && direction === 'bottom') return;
     if (current === 'bottom' && direction === 'top') return;
+    this.props.stopTurning();
     this.props.changeDirection(direction);
   }
   render() {
@@ -67,6 +69,7 @@ function callback() {
   //const date1 = new Date();
   const { direction, body, food, isPlaying } = this.props.snake;
   if (!isPlaying) return;
+  this.props.startTurning();
   if (isGameOver(body)) {
     this.props.pauseGame();
     this.props.showWindow();
